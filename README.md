@@ -1,3 +1,7 @@
+<div style="text-align:center">
+  <img src="http://tripallyzk.cluster020.hosting.ovh.net/wp-content/themes/files/images/logo.png" />
+</div>
+
 ## How to run TripAlly Demo Application with the Ionic CLI:
 
 First, install the latest version of `Node.js` into your system.
