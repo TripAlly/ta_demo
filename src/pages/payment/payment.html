@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 text-center>
+    Your Internet Package:
+  </h1>
+
+  <p text-center>
+    <b>3 days</b> of unlimited mobile internet in <b>THAILAND</b>, mobile operator <b>DTAC</b>, starting from <b>1 June 2018</b>
+  </p>
+
+  <p text-center>
+    Pay <b>3 ALLY</b> or <b>9 USD</b> from your <b>TripAlly</b> balance:
+  </p>
+
+  <br><br>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+          <ion-icon name="cash"></ion-icon>
+          <ion-input type="text" value="3 ALLY"></ion-input>
+      </ion-col>
+      <ion-col col-6>
+          <button ion-button color="secondary" block [navPush]="thanksPage">Pay ALLY</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+          <ion-icon name="logo-usd"></ion-icon>
+          <ion-input type="text" value="9 USD"></ion-input>
+      </ion-col>
+      <ion-col col-6>
+          <button ion-button color="secondary" block [navPush]="thanksPage">Pay USD</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
