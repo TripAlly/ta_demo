@@ -1,6 +1,6 @@
 {
   "name": "ta-demo",
-  "app_id": "",
+  "app_id": "f2c95c2a",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
