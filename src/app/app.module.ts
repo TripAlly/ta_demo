@@ -11,6 +11,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { InternetPage } from '../pages/internet/internet';
 import { PaymentPage } from '../pages/payment/payment';
+import { ThanksPage } from '../pages/thanks/thanks';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +26,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     TabsPage,
     InternetPage,
-    PaymentPage
+    PaymentPage,
+    ThanksPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     TabsPage,
     InternetPage,
-    PaymentPage
+    PaymentPage,
+    ThanksPage
   ],
   providers: [
     StatusBar,

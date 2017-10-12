@@ -22,7 +22,8 @@ export class LoginPage {
       dismissOnPageChange: true
     }).present();
 
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(TabsPage);
+
   }
 
 }
