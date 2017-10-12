@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
-
-import { HomePage } from '../home/home';
 import { TabsPage } from '../tabs/tabs';
 
 @Component({
@@ -23,7 +21,6 @@ export class LoginPage {
     }).present();
 
     this.navCtrl.setRoot(TabsPage);
-
   }
 
 }
