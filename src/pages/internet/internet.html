@@ -1,50 +1,54 @@
 <ion-header>
   <ion-navbar>
-
-
+    <ion-title>
+      Internet
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <p>Select date, country, network and how many days</p>
-    <ion-list>
+    <h2 text-center pad>Select date, country, network and how many days</h2>
+
+    <ion-list padding-top>
       <ion-item no-padding>
         <ion-label>Country</ion-label>
-        <ion-select [(ngModel)]="country">
-          <ion-option value="">Thailand</ion-option>
-          <ion-option value="">Laos</ion-option>
-          <ion-option value="">Myanmar</ion-option>
-          <ion-option value="">Cambodia</ion-option>
-          <ion-option value="">Vietnam</ion-option>
-          <ion-option value="">Malaysia</ion-option>
-          <ion-option value="">Singapore</ion-option>
-          <ion-option value="">China</ion-option>
-          <ion-option value="">Japan</ion-option>
-          <ion-option value="">Hong Kong SAR</ion-option>
+        <ion-select [(ngModel)]="selectedCountry" interface="popover">
+          <ion-option *ngFor="let country of countries" [value]="country">
+            {{ country.title }}
+          </ion-option>
         </ion-select>
       </ion-item>
 
       <ion-item no-padding>
         <ion-label>Mobile Network</ion-label>
-        <ion-select [(ngModel)]="network">
-          <ion-option value="">DTAC</ion-option>
-          <ion-option value="">Beeline</ion-option>
-          <ion-option value="">ETL</ion-option>
-          <ion-option value="">Telenor</ion-option>
-          <ion-option value="">Smart Axiata</ion-option>
-          <ion-option value="">Cellcard</ion-option>
-          <ion-option value="">Vietell</ion-option>
-          <ion-option value="">DiGi</ion-option>
-          <ion-option value="">Singtel</ion-option>
-          <ion-option value="">China Mobile</ion-option>
-          <ion-option value="">Au byKDDI</ion-option>
-          <ion-option value="">China Mobile HK</ion-option>
+        <ion-select [(ngModel)]="selectedNetwork" interface="popover">
+          <ion-option *ngFor="let network of selectedCountry.networks" [value]="network">
+            {{ network.title }}
+          </ion-option>
         </ion-select>
+      </ion-item>
+
+      <ion-item no-padding>
+        <ion-label>Date of arrival</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="selectedDate"></ion-datetime>
       </ion-item>
 
     </ion-list>
 
+    <ion-card color="secondary" no-margin style="width: 100%; padding: 16px; margin-bottom: 32px;">
+      <ion-grid no-padding>
+        <ion-row>
+          <ion-col col-6>
+            <p style="color: #000;">Price for selected Internet package:</p>
+          </ion-col>
+          <ion-col col-6 text-center>
+            <p style="color: #000; font-weight: bold; font-size: 1.6rem; padding-top: 8px;">3 ALLY or 9 USD</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
     <div>
-      <button ion-button color="primary" block [navPush]="paymentPage">Pay now</button>
+      <button ion-button color="primary" block (click)="payNow()">Pay now</button>
     </div>
 </ion-content>
