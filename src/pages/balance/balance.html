@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      <div>Top up TripAlly balance</div>
+      <div style="font-size: 1.3rem; font-weight: normal;">Select top up method</div>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding class="card-background-page-balance">
+  <ion-grid no-padding padding-top>
+    <ion-row>
+      <ion-col col-6 no-padding>
+        <ion-card [navPush]="cardPage">
+          <img src="assets/card-saopaolo.png"/>
+          <div class="card-title" text-uppercase>Bank card</div>
+          <div class="card-subtitle">VISA, MasterCard</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 no-padding>
+        <ion-card [navPush]="scratchPage">
+          <img src="assets/card-amsterdam.png"/>
+          <div class="card-title" text-uppercase>Scratch Card</div>
+          <div class="card-subtitle">Buy from our partners</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 no-padding>
+        <ion-card [navPush]="allyPage">
+          <img src="assets/card-sf.png"/>
+          <div class="card-title" text-uppercase>ALLY Tokens</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6 no-padding>
+        <ion-card>
+          <img src="assets/card-madison.png"/>
+          <div class="card-title">Other</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,8 +1,15 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Internet
+      <div>Internet</div>
+      <div style="font-size: 1.3rem; font-weight: normal;">Select your package</div>
     </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="pushNext()">
+          Next <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -35,14 +42,24 @@
 
     </ion-list>
 
-    <ion-card color="secondary" no-margin style="width: 100%; padding: 16px; margin-bottom: 32px;">
+    <h3 text-center>Choose you Internat packet</h3>
+
+    <ion-item no-padding margin-bottom>
+      <ion-select [(ngModel)]="selectedPacket" interface="action-sheet" class="full-width-select" style="padding-left: 0px;">
+        <ion-option *ngFor="let packet of packets" [value]="packet">
+          Unlimited Internet for {{ packet.days }} days
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-card color="secondary" *ngIf="selectedPacket.price" no-margin style="width: 100%; padding: 16px; margin-bottom: 16px; margin-top: 48px;">
       <ion-grid no-padding>
         <ion-row>
           <ion-col col-6>
             <p style="color: #000;">Price for selected Internet package:</p>
           </ion-col>
           <ion-col col-6 text-center>
-            <p style="color: #000; font-weight: bold; font-size: 1.6rem; padding-top: 8px;">3 ALLY or 9 USD</p>
+            <p style="color: #000; font-weight: bold; font-size: 1.6rem; padding-top: 8px;">{{ selectedPacket.price }} ALLY or {{ selectedPacket.price * 3 }} USD</p>
           </ion-col>
         </ion-row>
       </ion-grid>

@@ -121,6 +121,34 @@ export class InternetPage {
     }
   ];
 
+  packets = [
+    {
+      id: 1,
+      days: '1',
+      price: 1 // ALLY
+    },
+    {
+      id: 2,
+      days: '2',
+      price: 2 // ALLY
+    },
+    {
+      id: 3,
+      days: '3',
+      price: 3 // ALLY
+    },
+    {
+      id: 4,
+      days: '7',
+      price: 5 // ALLY
+    },
+    {
+      id: 5,
+      days: '14',
+      price: 9 // ALLY
+    },
+  ];
+
   selectedCountry = {
     id: '',
     title: '',
@@ -129,20 +157,19 @@ export class InternetPage {
 
   selectedNetwork:any = null;
   selectedDate:any = null;
+  selectedPacket:any = {};
 
   constructor(public navCtrl: NavController) {
 
   }
 
   payNow() {
-    // console.log(this.selectedCountry)
-    // console.log(this.selectedNetwork)
-    // console.log(this.selectedDate)
-
+    console.log(this.selectedPacket)
     this.navCtrl.push(this.paymentPage, {
       country: this.selectedCountry,
       network: this.selectedNetwork,
       date: this.selectedDate,
+      packet: this.selectedPacket
     })
   }
 

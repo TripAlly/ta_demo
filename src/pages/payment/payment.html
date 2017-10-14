@@ -13,32 +13,49 @@
   </h1>
 
   <p text-center>
-    <b>3 days</b> of unlimited mobile internet in <b text-uppercase>{{ country.title }}</b>, mobile operator <b text-uppercase>{{ network.title }}</b>, starting from <b>{{ date }}</b>
+    <b>{{ packet.days}} days</b> of unlimited mobile internet in <b text-uppercase>{{ country.title }}</b>, mobile operator <b text-uppercase>{{ network.title }}</b>, starting from <b>{{ date }}</b>
   </p>
 
   <p text-center>
-    Pay <b>3 ALLY</b> or <b>9 USD</b> from your <b>TripAlly</b> balance:
+    Pay <b>{{ packet.price }} ALLY</b> or <b>{{ packet.price * 3 }} USD</b> from your <b>TripAlly</b> balance:
   </p>
 
   <br><br>
 
   <ion-grid>
     <ion-row>
-      <ion-col col-6>
+      <ion-col col-6 style="font-size: 2.5rem;">
           <ion-icon name="cash"></ion-icon>
-          <ion-input type="text" value="3 ALLY"></ion-input>
+          <span>{{ packet.price }}</span> ALLY
       </ion-col>
       <ion-col col-6>
           <button ion-button color="secondary" block [navPush]="thanksPage">Pay ALLY</button>
       </ion-col>
     </ion-row>
+
     <ion-row>
       <ion-col col-6>
+          <button ion-button color="primary" small [navPush]="balancePage">
+            Top up ALLY balance
+          </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6 style="font-size: 2.5rem;">
           <ion-icon name="logo-usd"></ion-icon>
-          <ion-input type="text" value="9 USD"></ion-input>
+          <span>{{ packet.price * 3 }}</span> USD
       </ion-col>
       <ion-col col-6>
           <button ion-button color="secondary" block [navPush]="thanksPage">Pay USD</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6>
+          <button ion-button color="primary" small [navPush]="balancePage">
+            Top up USD balance
+          </button>
       </ion-col>
     </ion-row>
   </ion-grid>

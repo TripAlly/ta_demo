@@ -12,6 +12,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { InternetPage } from '../pages/internet/internet';
 import { PaymentPage } from '../pages/payment/payment';
 import { ThanksPage } from '../pages/thanks/thanks';
+import { BalancePage } from '../pages/balance/balance';
+
+import { CardPage } from '../pages/card/card';
+import { AllyPage } from '../pages/ally/ally';
+import { ScratchPage } from '../pages/scratch/scratch';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -27,7 +32,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     InternetPage,
     PaymentPage,
-    ThanksPage
+    ThanksPage,
+    BalancePage,
+    CardPage,
+    AllyPage,
+    ScratchPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +53,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     InternetPage,
     PaymentPage,
-    ThanksPage
+    ThanksPage,
+    BalancePage,
+    CardPage,
+    AllyPage,
+    ScratchPage
   ],
   providers: [
     StatusBar,
