@@ -1,13 +1,13 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Payment</ion-title>
+    <ion-title>Pay for selected Internet package</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <h1 text-center>
     Your Internet Package:
   </h1>
@@ -24,39 +24,42 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col col-6 style="font-size: 2.5rem;">
-          <ion-icon name="cash"></ion-icon>
-          <span>{{ packet.price }}</span> ALLY
-      </ion-col>
-      <ion-col col-6>
-          <button ion-button color="secondary" block [navPush]="thanksPage">Pay ALLY</button>
-      </ion-col>
+        <ion-col col-3>Balance</ion-col>
+        <ion-col col-3>Total</ion-col>
+        <ion-col col-3></ion-col>
+        <ion-col col-3></ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col col-6>
-          <button ion-button color="primary" small [navPush]="balancePage">
-            Top up ALLY balance
-          </button>
-      </ion-col>
+        <ion-col col-3 style="font-size: 1.9rem; padding-top: 15px;">
+            <ion-icon name="cash"></ion-icon>
+            ALLY
+        </ion-col>
+        <ion-col col-3 style="font-size: 2.3rem; font-weight: bold; padding-top: 12px;">
+            <span>{{ account.balance.ally }}</span>
+        </ion-col>
+        <ion-col col-3>
+            <button ion-button color="secondary" block (click)="pay()">Pay ALLY</button>
+        </ion-col>
+        <ion-col col-3>
+            <button ion-button color="primary" block [navPush]="balancePage">Top up</button>
+        </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col col-6 style="font-size: 2.5rem;">
-          <ion-icon name="logo-usd"></ion-icon>
-          <span>{{ packet.price * 3 }}</span> USD
-      </ion-col>
-      <ion-col col-6>
-          <button ion-button color="secondary" block [navPush]="thanksPage">Pay USD</button>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col col-6>
-          <button ion-button color="primary" small [navPush]="balancePage">
-            Top up USD balance
-          </button>
-      </ion-col>
+        <ion-col col-3 style="font-size: 1.9rem; padding-top: 15px;">
+            <ion-icon name="logo-usd"></ion-icon>
+            USD
+        </ion-col>
+        <ion-col col-3 style="font-size: 2.3rem; font-weight: bold; padding-top: 12px;">
+            <span>{{ account.balance.usd }}</span>
+        </ion-col>
+        <ion-col col-3>
+            <button ion-button color="secondary" block (click)="pay()">Pay USD</button>
+        </ion-col>
+        <ion-col col-3>
+            <button ion-button color="primary" block [navPush]="balancePage">Top up</button>
+        </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

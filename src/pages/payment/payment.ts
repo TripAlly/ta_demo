@@ -5,6 +5,8 @@ import { NavParams } from 'ionic-angular';
 import { ThanksPage } from '../thanks/thanks';
 import { BalancePage } from '../balance/balance';
 
+import AccountData from '../../data/account';
+
 @Component({
   selector: 'page-payment',
   templateUrl: 'payment.html',
@@ -12,6 +14,8 @@ import { BalancePage } from '../balance/balance';
 export class PaymentPage {
   thanksPage = ThanksPage;
   balancePage = BalancePage;
+
+  account = AccountData;
 
   country:any = null;
   network:any = null;
@@ -23,13 +27,14 @@ export class PaymentPage {
     this.network = navParams.get('network');
     this.date = navParams.get('date');
     this.packet = navParams.get('packet');
-
-    console.log(this.country);
-    console.log(this.network);
-    console.log(this.date);
-    console.log(this.packet);
   }
 
-
-
+  pay() {
+    this.navCtrl.push(this.thanksPage, {
+      country: this.country,
+      network: this.network,
+      date: this.date,
+      packet: this.packet
+    })
+  }
 }

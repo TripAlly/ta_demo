@@ -1,23 +1,33 @@
-<ion-content padding>
+<ion-content>
 
   <div text-center>
     <img src="assets/card-amsterdam.png">
   </div>
 
-  <h1 text-center>
-    Thank you!
-  </h1>
+  <div margin>
 
-  <p text-center>
-    Your successfully purchased Internet Package:
-  </p>
+    <h1 text-center>
+      Thank you!
+    </h1>
 
-  <p text-center>
-    3 days of unlimited mobile internet in THAILAND, mobile operator DTAC, starting from 01 June 2018
-  </p>
+    <p text-center>
+      You successfully purchased Internet Package:
+    </p>
 
-  <p text-center>
-    Please select DTAC network when you arrive to THAILAND on 01 June 2018
-  </p>
+    <p text-center>
+      <b>{{ packet.days}} days</b> of unlimited mobile internet in <b text-uppercase>{{ country.title }}</b>, mobile operator <b text-uppercase>{{ network.title }}</b>, starting from <b>{{ date }}</b>
+    </p>
+
+    <p text-center>
+      Please select <b text-uppercase>{{ network.title }}</b> network when you arrive to <b text-uppercase>{{ country.title }}</b> on <b>{{ date }}</b>
+    </p>
+
+    <p text-center>
+      This purchased Internet package you will see in your <ion-icon name="contact"></ion-icon> Profile and in  <ion-icon name="list"></ion-icon> History
+    </p>
+
+    <button ion-button color="primary" block [navPush]="homePage">Ok</button>
+
+  </div>
 
 </ion-content>

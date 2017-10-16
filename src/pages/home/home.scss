@@ -3,6 +3,12 @@
   ion-card {
     position: relative;
     text-align: center;
+
+    img.disabled {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      opacity: 0.8;
+    }
   }
 
   .card-title {

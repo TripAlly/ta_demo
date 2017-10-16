@@ -160,7 +160,7 @@ export class InternetPage {
   selectedPacket:any = {};
 
   constructor(public navCtrl: NavController) {
-
+    console.log(this.selectedNetwork)
   }
 
   payNow() {
