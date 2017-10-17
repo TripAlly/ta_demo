@@ -12,12 +12,46 @@ export class InternetPage {
 
   countries = [
     {
-      id: 'th',
-      title: 'Thailand',
+      id: 'ca',
+      title: 'Cambodia',
       networks: [
         {
-          id: 'dt',
-          title: 'DTAC'
+          id: 'sm',
+          title: 'Smart Axiata'
+        },
+        {
+          id: 'ce',
+          title: 'Cellcard'
+        }
+      ]
+    },
+    {
+      id: 'ch',
+      title: 'China',
+      networks: [
+        {
+          id: 'cm',
+          title: 'China Mobile'
+        }
+      ]
+    },
+    {
+      id: 'ho',
+      title: 'Hong Kong SAR',
+      networks: [
+        {
+          id: 'cmh',
+          title: 'China Mobile HK'
+        }
+      ]
+    },
+    {
+      id: 'ja',
+      title: 'Japan',
+      networks: [
+        {
+          id: 'au',
+          title: 'Au byKDDI'
         }
       ]
     },
@@ -36,46 +70,22 @@ export class InternetPage {
       ]
     },
     {
-      id: 'my',
-      title: 'Myanmar',
-      networks: [
-        {
-          id: 'te',
-          title: 'Telenor'
-        }
-      ]
-    },
-    {
-      id: 'ca',
-      title: 'Cambodia',
-      networks: [
-        {
-          id: 'sm',
-          title: 'Smart Axiata'
-        },
-        {
-          id: 'ce',
-          title: 'Cellcard'
-        }
-      ]
-    },
-    {
-      id: 'vi',
-      title: 'Vietnam',
-      networks: [
-        {
-          id: 'vi',
-          title: 'Vietell'
-        }
-      ]
-    },
-    {
       id: 'ma',
       title: 'Malaysia',
       networks: [
         {
           id: 'di',
           title: 'DiGi'
+        }
+      ]
+    },
+    {
+      id: 'my',
+      title: 'Myanmar',
+      networks: [
+        {
+          id: 'te',
+          title: 'Telenor'
         }
       ]
     },
@@ -90,32 +100,22 @@ export class InternetPage {
       ]
     },
     {
-      id: 'ch',
-      title: 'China',
+      id: 'th',
+      title: 'Thailand',
       networks: [
         {
-          id: 'cm',
-          title: 'China Mobile'
+          id: 'dt',
+          title: 'DTAC'
         }
       ]
     },
     {
-      id: 'ja',
-      title: 'Japan',
+      id: 'vi',
+      title: 'Vietnam',
       networks: [
         {
-          id: 'au',
-          title: 'Au byKDDI'
-        }
-      ]
-    },
-    {
-      id: 'ho',
-      title: 'Hong Kong SAR',
-      networks: [
-        {
-          id: 'cmh',
-          title: 'China Mobile HK'
+          id: 'vi',
+          title: 'Vietell'
         }
       ]
     }

@@ -10,6 +10,22 @@
 </ion-header>
 
 
-<ion-content no-padding >
+<ion-content padding>
+  <div text-center>
+    <img src="assets/qr_ally_topup.png" style="max-width: 70%">
+  </div>
 
+  <p text-center>
+    To top up your ALLY balance at TripAlly send your ALLY tokens to following address:
+  </p>
+
+  <p text-center style="color: #f53d3d">
+    <b>{{ address }}</b>
+  </p>
+
+  <button ion-button color="secondary" block (click)="copy()">Copy</button>
+
+  <p text-center>
+    Usually payment transaction processed during 1-2 minutes.
+  </p>
 </ion-content>

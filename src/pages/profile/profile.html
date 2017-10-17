@@ -7,15 +7,18 @@
 </ion-header>
 
 <ion-content>
-
     <ion-card>
-
       <ion-item>
         <ion-avatar item-start>
-          <img src="assets/default-user-girl.jpg">
+          <img src="assets/default-user-girl.jpg"
+                width="60" height="60"
+                style="width: 60px; height: 60px">
         </ion-avatar>
-        <h2>Marty McFly</h2>
+        <h2>Amanda Smith</h2>
       </ion-item>
+    </ion-card>
+
+    <ion-card>
 
       <ion-card-content>
         <ion-list>
@@ -24,36 +27,39 @@
             +1 (967) 320-111-560
           </ion-item>
           <ion-item no-padding>
-            <ion-icon name="at" item-start></ion-icon>
-            0xd26114cd6EE289AccF82350c8
+            <img src="assets/fa-icon-ethereum.svg" style="width: 19px; float: left; margin-left: 2px; margin-right: 35px;">
+            <div style="padding-top: 7px; font-size: 1.5rem;">0xd26114cd6EE289AccF82350c8</div>
           </ion-item>
           <ion-item no-padding>
             <ion-icon name="cash" item-start></ion-icon>
-            3 200 ALLY
+            {{ account.balance.ally }} ALLY
             <button ion-button color="secondary">Cash Out</button>
           </ion-item>
           <ion-item no-padding>
-            <ion-icon name="card" item-start></ion-icon>
-            245.30 USD
+            <ion-icon name="logo-usd" item-start></ion-icon>
+            {{ account.balance.usd }} USD
           </ion-item>
           <ion-item no-padding>
             <ion-icon name="list-box" item-start></ion-icon>
-            <ion-badge color="secondary">7 day unlim Thai</ion-badge>
-            <ion-badge color="secondary">1 day China</ion-badge>
+            <ion-badge color="secondary">3 days of unlimited mobile Internet in Cambodia</ion-badge>
+            <ion-badge color="secondary">14 days of unlimited mobile Internet in Norway</ion-badge>
           </ion-item>
         </ion-list>
       </ion-card-content>
 
       <ion-row>
         <ion-col>
-          <button ion-button icon-left>
-            <ion-icon name="help-buoy"></ion-icon>
-            <div>Contact Support Team</div>
-          </button>
         </ion-col>
 
       </ion-row>
 
     </ion-card>
+
+    <div style="padding: 10px">
+      <button ion-button icon-left block>
+        <ion-icon name="help-buoy"></ion-icon>
+        <div>Contact Support Team</div>
+      </button>
+    </div>
 
 </ion-content>

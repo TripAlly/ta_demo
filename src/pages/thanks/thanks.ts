@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { NavParams } from 'ionic-angular';
+import { Platform, NavParams, NavController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
 
@@ -16,11 +15,31 @@ export class ThanksPage {
   date:any = null;
   packet:any = {};
 
-  constructor(public navParams: NavParams, public navCtrl: NavController) {
+  public unregisterBackButtonAction: any;
+
+  constructor(public navParams: NavParams, public navCtrl: NavController, public platform: Platform) {
     this.country = navParams.get('country');
     this.network = navParams.get('network');
     this.date = navParams.get('date');
     this.packet = navParams.get('packet');
+  }
+
+  ionViewDidEnter() {
+      this.initializeBackButtonCustomHandler();
+  }
+
+  ionViewWillLeave() {
+      this.unregisterBackButtonAction && this.unregisterBackButtonAction();
+  }
+
+  public initializeBackButtonCustomHandler(): void {
+      this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+          this.customHandleBackButton();
+      }, 10);
+  }
+
+  private customHandleBackButton(): void {
+    console.log('Block hardware backBtn...')
   }
 
 }
