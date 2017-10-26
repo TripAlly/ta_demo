@@ -8,13 +8,13 @@
 
 <ion-content>
     <ion-card>
-      <ion-item>
+      <ion-item color="secondary">
         <ion-avatar item-start>
           <img src="assets/default-user-girl.jpg"
                 width="60" height="60"
                 style="width: 60px; height: 60px">
         </ion-avatar>
-        <h2>Amanda Smith</h2>
+        <h2 style="color: #fff; font-weight: bold;">Amanda Smith</h2>
       </ion-item>
     </ion-card>
 
@@ -32,7 +32,7 @@
           </ion-item>
           <ion-item no-padding>
             <ion-icon name="cash" item-start></ion-icon>
-            {{ account.balance.ally }} ALLY
+            <div style="height: 29px; float: left; padding-top: 7px;padding-right: 10px;">{{ account.balance.ally }} ALLY</div>
             <button ion-button color="secondary">Cash Out</button>
           </ion-item>
           <ion-item no-padding>

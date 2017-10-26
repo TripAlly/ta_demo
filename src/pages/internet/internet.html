@@ -55,11 +55,13 @@
     <ion-card color="secondary" *ngIf="selectedPacket.price" no-margin style="width: 100%; padding: 16px; margin-bottom: 16px;">
       <ion-grid no-padding>
         <ion-row>
-          <ion-col col-6>
+          <ion-col col-12 text-center>
             <p style="color: #000;">Price for selected Internet package:</p>
           </ion-col>
-          <ion-col col-6 text-center>
-            <p style="color: #000; font-weight: bold; font-size: 1.6rem; padding-top: 8px;">{{ selectedPacket.price }} ALLY or {{ selectedPacket.price * 3 }} USD</p>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 text-center>
+            <p style="color: #000; font-weight: bold; font-size: 1.8rem; padding-top: 2px;">{{ selectedPacket.price }} ALLY or {{ selectedPacket.price * 3 }} USD</p>
           </ion-col>
         </ion-row>
       </ion-grid>
